@@ -3,27 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohasega <yohasega@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yohasega <yohasega@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 14:49:42 by yohasega          #+#    #+#             */
-/*   Updated: 2024/05/09 13:48:18 by yohasega         ###   ########.fr       */
+/*   Updated: 2024/07/16 19:01:45 by yohasega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// calloc var
 char	*ft_strdup(const char *s1)
 {
 	size_t	len;
 	char	*str;
 
 	len = ft_strlen(s1);
-	str = malloc(sizeof(char) * (len + 1));
+	str = (char *)ft_calloc(1, sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
-	ft_strlcpy(str, s1, len + 1);
+	ft_memcpy(str, s1, len);
 	return (str);
 }
+
+// malloc ver
+// char	*ft_strdup(const char *s1)
+// {
+// 	size_t	len;
+// 	char	*str;
+
+// 	len = ft_strlen(s1);
+// 	str = malloc(sizeof(char) * (len + 1));
+// 	if (str == NULL)
+// 		return (NULL);
+// 	ft_strlcpy(str, s1, len + 1);
+// 	return (str);
+// }
 
 // int	main(void)
 // {

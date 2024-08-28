@@ -18,7 +18,7 @@ endif
 NAME = libft.a
 
 %.o: %.c
-	$(CC) -g $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohasega <yohasega@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yohasega <yohasega@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 22:10:00 by yohasega          #+#    #+#             */
-/*   Updated: 2024/05/09 12:00:40 by yohasega         ###   ########.fr       */
+/*   Updated: 2024/08/04 19:47:14 by yohasega         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,26 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(array, count * size);
 	return (array);
 }
+
+// ===== without ft_bzero =====
+// void	*ft_calloc(size_t count, size_t size)
+// {
+// 	void	*array;
+// 	size_t		i;
+
+// 	if (validate(count, size) == 0)
+// 		return (NULL);
+// 	array = malloc(count * size);
+// 	if (array == NULL)
+// 		return (NULL);
+// 	i = 0;
+// 	while (i < size)
+// 	{
+// 		((char *)array)[i] = 0;
+// 		i++;
+// 	}
+// 	return (array);
+// }
 
 // int	main(void)
 // {
