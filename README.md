@@ -1,6 +1,6 @@
 # libft
 
-42スクールのlibftプロジェクト - C標準ライブラリの関数の再実装
+42Tokyoのlibftプロジェクト - C標準ライブラリの関数の再実装
 
 ## 概要
 
@@ -107,6 +107,8 @@ int main(void)
 cc -Wall -Wextra -Werror main.c -L. -lft
 ```
 
-## 作者
+## 作成者
 
-yohasega (yohasega@student.42.fr)
+- **yohasega**
+- 作成日: 2024年12月20日  
+- 最終更新: 2024年12月20日
