@@ -106,9 +106,3 @@ int main(void)
 ```bash
 cc -Wall -Wextra -Werror main.c -L. -lft
 ```
-
-## 作成者
-
-- **yohasega**
-- 作成日: 2024年5月10日  
-- 最終更新: 2024年8月28日
